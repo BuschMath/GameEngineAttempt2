@@ -47,10 +47,10 @@ bool SceneFileManager::LoadScene(const std::string& filePath, EntityFactory& ent
     return true;
 }
 
-bool SceneFileManager::SaveScene(const std::string& filePath, const EntityFactory& entityFactory) {
+bool SceneFileManager::SaveScene(const std::string& filePath, const std::vector<std::shared_ptr<Entity>>& entities) {
     nlohmann::json jsonData;
 
-    for (const auto& entity : entityFactory.GetEntities()) {
+    for (const auto& entity : entities) {
         nlohmann::json entityData;
         entityData["name"] = entity->GetName();
 

@@ -22,6 +22,13 @@ public:
         return m_entities;
     }
 
+    void RemoveAllEntities() {
+        for (auto& entity : m_entities) {
+            entity->RemoveComponents();
+        }
+        m_entities.clear();
+    }
+
 private:
     std::vector<std::shared_ptr<Entity>> m_entities;
 };

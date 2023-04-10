@@ -13,11 +13,11 @@ public:
     const std::string& GetName() const { return m_name; }
     void SetName(const std::string& name) { m_name = name; }
 
-    template<typename T, typename... Args>
-    std::shared_ptr<T> AddComponent(Args&&... args) {
+    template<typename T>
+    std::shared_ptr<T> AddComponent() {
+        std::shared_ptr<T> component = std::make_shared<T>();
         static_assert(std::is_base_of<Component, T>::value, "T must be a subclass of Component");
 
-        auto component = std::make_shared<T>(std::forward<Args>(args)...);
         component->SetParent(shared_from_this());
         m_components.push_back(component);
 

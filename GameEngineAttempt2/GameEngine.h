@@ -9,6 +9,7 @@
 #include "ComponentFactory.h"
 #include "ComponentManager.h"
 #include "EntityFactory.h"
+#include "EntityCreator.h"
 
 class GameEngine {
 public:
@@ -22,6 +23,7 @@ public:
     void Render();
 
     // Add more public methods as necessary...
+    void CreateEntities();
 
 private:
     GameEngine(); // Private constructor to enforce singleton pattern
@@ -33,6 +35,7 @@ private:
     ComponentFactory* m_componentFactory;
     ComponentManager* m_componentManager;
     EntityFactory* m_entityFactory;
+    EntityCreator* m_entityCreator;
 
     // Disable copy and assignment
     GameEngine(const GameEngine&) = delete;
