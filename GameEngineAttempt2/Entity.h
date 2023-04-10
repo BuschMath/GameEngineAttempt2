@@ -46,6 +46,19 @@ public:
         m_components.clear();
     }
 
+    template<typename T>
+    bool HasComponent() const {
+        static_assert(std::is_base_of<Component, T>::value, "T must be a subclass of Component");
+
+        for (auto& component : m_components) {
+            if (dynamic_cast<T*>(component.get())) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
 private:
     std::string m_name;
     std::vector<std::shared_ptr<Component>> m_components;

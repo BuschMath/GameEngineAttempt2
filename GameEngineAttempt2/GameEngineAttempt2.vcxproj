@@ -71,7 +71,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2;C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\spdlog\include;C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\GLFW\include;C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\GLEW\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\busch\source\repos\BuschMath\GameEngineAttempt2\GameEngineAttempt2\spdlog\include;C:\Users\busch\source\repos\BuschMath\GameEngineAttempt2\GameEngineAttempt2\GLFW\include;C:\Users\busch\source\repos\BuschMath\GameEngineAttempt2\GameEngineAttempt2\GLEW\include;C:\Users\busch\source\repos\BuschMath\GameEngineAttempt2\GameEngineAttempt2;C:\Users\busch\source\repos\BuschMath\GameEngineAttempt2\GameEngineAttempt2\json-develop\include;C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2;C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\spdlog\include;C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\GLFW\include;C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\GLEW\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\GLFW\lib-vc2019;C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\GLEW\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -160,12 +160,14 @@
     <ClInclude Include="GameEngine.h" />
     <ClInclude Include="HealthComponent.h" />
     <ClInclude Include="PositionComponent.h" />
+    <ClInclude Include="SceneFileManager.h" />
     <ClInclude Include="VelocityComponent.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameEngine.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="SceneFileManager.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

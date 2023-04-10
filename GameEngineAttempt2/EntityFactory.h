@@ -20,6 +20,8 @@ public:
         return entity;
     }
 
+    const std::vector<std::shared_ptr<Entity>> GetEntities() const { return m_entityManager->GetEntities(); }
+
 private:
     EntityFactory() {
         m_entityManager = std::make_unique<EntityManager>();
