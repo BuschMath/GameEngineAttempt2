@@ -24,6 +24,7 @@ public:
 
     // Add more public methods as necessary...
     void CreateEntities();
+    void LoadScene(const std::string& fileName) { m_entityFactory->LoadScene(fileName); }
 
 private:
     GameEngine(); // Private constructor to enforce singleton pattern
