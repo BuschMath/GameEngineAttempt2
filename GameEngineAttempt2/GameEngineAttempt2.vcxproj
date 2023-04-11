@@ -42,7 +42,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -79,7 +79,7 @@
     <LibraryPath>C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\GLFW\lib-vc2019;C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\GLEW\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\GLFW\include;C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\GLEW\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\busch\source\repos\BuschMath\GameEngineAttempt2\GameEngineAttempt2;C:\Users\busch\source\repos\BuschMath\GameEngineAttempt2\GameEngineAttempt2\GLEW\include;C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\GLFW\include;C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\GLEW\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\GLFW\lib-vc2019;C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\GLEW\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -151,6 +151,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AISystem.h" />
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="ComponentFactory.h" />
     <ClInclude Include="ComponentManager.h" />
@@ -160,8 +162,18 @@
     <ClInclude Include="EntityManager.h" />
     <ClInclude Include="GameEngine.h" />
     <ClInclude Include="HealthComponent.h" />
+    <ClInclude Include="InputSystem.h" />
+    <ClInclude Include="PhysicsSystem.h" />
     <ClInclude Include="PositionComponent.h" />
+    <ClInclude Include="RenderComponent.h" />
+    <ClInclude Include="RenderSystem.h" />
+    <ClInclude Include="RotationComponent.h" />
+    <ClInclude Include="ScaleComponent.h" />
     <ClInclude Include="SceneFileManager.h" />
+    <ClInclude Include="ShaderProgram.h" />
+    <ClInclude Include="System.h" />
+    <ClInclude Include="SystemFactory.h" />
+    <ClInclude Include="SystemManager.h" />
     <ClInclude Include="VelocityComponent.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
@@ -170,7 +182,9 @@
     <ClCompile Include="EntityFactory.cpp" />
     <ClCompile Include="GameEngine.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="RenderSystem.cpp" />
     <ClCompile Include="SceneFileManager.cpp" />
+    <ClCompile Include="ShaderProgram.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

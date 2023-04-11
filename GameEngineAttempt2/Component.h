@@ -1,6 +1,8 @@
 #ifndef COMPONENT_H
 #define COMPONENT_H
 
+#include <memory>
+
 class Entity;
 
 class Component : public std::enable_shared_from_this<Component> {
