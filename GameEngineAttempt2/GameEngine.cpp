@@ -90,7 +90,7 @@ void GameEngine::CreateEntities()
     std::shared_ptr<Entity> entity;
 
     while (true) {
-        std::cout << "\nEnter a command ('create', 'position', 'velocity', 'health', or 'save'): ";
+        std::cout << "\nEnter a command ('create', 'position', 'velocity', 'health', 'save' or 'exit'): ";
         std::getline(std::cin, command);
 
         if (command == "create") {
@@ -98,6 +98,7 @@ void GameEngine::CreateEntities()
             std::cin >> name;
             entity = m_entityCreator->CreateEntity(name);
             std::cout << "Entity created!\n";
+            std::getline(std::cin, name);
         }
         else if (command == "position") {
             std::cout << "Enter x, y, and z coordinates for the position component: ";
@@ -105,6 +106,7 @@ void GameEngine::CreateEntities()
             std::cin >> x >> y >> z;
             m_entityCreator->AddPositionComponent(entity, x, y, z);
             std::cout << "Position component added!\n";
+            std::getline(std::cin, name);
         }
         else if (command == "velocity") {
             std::cout << "Enter x, y, and z coordinates for the velocity component: ";
@@ -112,6 +114,7 @@ void GameEngine::CreateEntities()
             std::cin >> x >> y >> z;
             m_entityCreator->AddVelocityComponent(entity, x, y, z);
             std::cout << "Velocity component added!\n";
+            std::getline(std::cin, name);
         }
         else if (command == "health") {
             std::cout << "Enter the health value for the health component: ";
@@ -119,6 +122,7 @@ void GameEngine::CreateEntities()
             std::cin >> health;
             m_entityCreator->AddHealthComponent(entity, health);
             std::cout << "Health component added!\n";
+            std::getline(std::cin, name);
         }
         else if (command == "save") {
             std::cout << "Enter the file name to save to: ";
@@ -126,7 +130,10 @@ void GameEngine::CreateEntities()
             std::getline(std::cin >> std::ws, fileName);
             m_entityCreator->SaveScene(fileName);
             std::cout << "Data saved to file " << fileName << "!\n";
+            std::getline(std::cin, name);
         }
+        else if (command == "exit")
+            return;
         else {
             std::cout << "Invalid command, please try again.\n";
         }
