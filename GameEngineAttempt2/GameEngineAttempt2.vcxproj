@@ -163,6 +163,7 @@
     <ClInclude Include="GameEngine.h" />
     <ClInclude Include="HealthComponent.h" />
     <ClInclude Include="InputSystem.h" />
+    <ClInclude Include="PhysicsComponent.h" />
     <ClInclude Include="PhysicsSystem.h" />
     <ClInclude Include="PositionComponent.h" />
     <ClInclude Include="RenderComponent.h" />
