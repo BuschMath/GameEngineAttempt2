@@ -10,6 +10,9 @@
 #include "ComponentManager.h"
 #include "EntityFactory.h"
 #include "EntityCreator.h"
+#include "RenderSystem.h"
+
+const std::string SCENE_DATA_FILE = "cubeScene.dat";
 
 class GameEngine {
 public:
@@ -37,6 +40,7 @@ private:
     ComponentManager* m_componentManager;
     EntityFactory* m_entityFactory;
     EntityCreator* m_entityCreator;
+    RenderSystem* m_renderSystem;
 
     // Disable copy and assignment
     GameEngine(const GameEngine&) = delete;

@@ -41,6 +41,35 @@ bool SceneFileManager::LoadScene(const std::string& filePath, EntityFactory& ent
             health->SetHealth(entityData["health"]["value"]);
         }
 
+        if (entityData.count("physics") > 0) {
+            auto physicsComponent = entity->AddComponent<PhysicsComponent>();
+            
+            physicsComponent->acceleration.x = entityData["physics"]["accelerationX"];
+            physicsComponent->acceleration.y = entityData["physics"]["accelerationY"];
+            physicsComponent->acceleration.z = entityData["physics"]["accelerationZ"];
+
+            physicsComponent->isCollidable = entityData["physics"]["collidable"];
+
+            physicsComponent->mass = entityData["physics"]["mass"];
+
+            physicsComponent->position.x = entityData["physics"]["positionX"];
+            physicsComponent->position.y = entityData["physics"]["positionY"];
+            physicsComponent->position.z = entityData["physics"]["positionZ"];
+
+            physicsComponent->rotation.w = entityData["physics"]["rotationW"];
+            physicsComponent->rotation.x = entityData["physics"]["rotationX"];
+            physicsComponent->rotation.y = entityData["physics"]["rotationY"];
+            physicsComponent->rotation.z = entityData["physics"]["rotationZ"];
+
+            physicsComponent->scale.x = entityData["physics"]["scaleX"];
+            physicsComponent->scale.y = entityData["physics"]["scaleY"];
+            physicsComponent->scale.z = entityData["physics"]["scaleZ"];
+
+            physicsComponent->velocity.x = entityData["physics"]["velocityX"];
+            physicsComponent->velocity.y = entityData["physics"]["velocityY"];
+            physicsComponent->velocity.z = entityData["physics"]["velocityZ"];
+        }
+
         // add more components as needed
     }
 

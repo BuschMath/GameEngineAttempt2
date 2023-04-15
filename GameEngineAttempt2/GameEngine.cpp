@@ -26,6 +26,8 @@ GameEngine::GameEngine()
 
     m_entityCreator = new EntityCreator();
 
+    m_renderSystem = new RenderSystem();
+
     m_gameEngineLogger->info("GameEngine constructor complete.\n.");
 }
 
@@ -59,6 +61,8 @@ void GameEngine::Initialize() {
     }
     m_gameEngineLogger->info("GLEW initialized.\n");
 
+    m_entityFactory->LoadScene(SCENE_DATA_FILE);
+
     // Initialize input handling
     // Initialize audio system
     // ...
@@ -76,7 +80,7 @@ void GameEngine::Render() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     // Render the current game state
-    // ...
+    m_renderSystem->Render();
 
     // Swap the front and back buffers
     glfwSwapBuffers(m_window->GetGLFWwindow());
@@ -101,7 +105,7 @@ void GameEngine::CreateEntities()
             std::getline(std::cin, name);
         }
         else if (command == "physics") {
-            m_entityCreator->AddPhysicsComponent();
+            m_entityCreator->AddPhysicsComponent(entity);
             std::cout << "Physics component added!\n";
             std::getline(std::cin, name);
         }
