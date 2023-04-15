@@ -12,6 +12,7 @@ class EntityFactory;
 #include "PositionComponent.h"
 #include "VelocityComponent.h"  
 #include "HealthComponent.h"
+#include "PhysicsComponent.h"
 
 class SceneFileManager {
 public:

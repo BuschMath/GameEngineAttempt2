@@ -5,6 +5,6 @@ int main()
 {
 	GameEngine& g = GameEngine::GetInstance();
 	g.Initialize();
-	g.LoadScene("TestSceneOne.dat");
+	g.CreateEntities();
 	return 0;
 }

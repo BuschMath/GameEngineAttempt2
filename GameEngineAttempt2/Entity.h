@@ -6,8 +6,6 @@
 #include <vector>
 #include "Component.h"
 #include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtc/quaternion.hpp>
 
 class Entity : public std::enable_shared_from_this<Entity> {
 public:
@@ -60,15 +58,6 @@ public:
         }
 
         return false;
-    }
-
-    glm::mat4 GetTransform() const {
-        // Calculate the transformation matrix of the entity based on its position, rotation, and scale
-        glm::mat4 translationMatrix = glm::translate(glm::mat4(1.0f), m_position);
-        glm::mat4 rotationMatrix = glm::toMat4(m_rotation);
-        glm::mat4 scaleMatrix = glm::scale(glm::mat4(1.0f), m_scale);
-
-        return translationMatrix * rotationMatrix * scaleMatrix;
     }
 
 private:

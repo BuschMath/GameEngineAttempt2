@@ -6,6 +6,7 @@
 #include <gl/glew.h>
 #include "Entity.h"
 #include "RenderComponent.h"
+#include "PhysicsComponent.h"
 #include "Camera.h"
 #include "ShaderProgram.h"
 

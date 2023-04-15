@@ -60,16 +60,17 @@ void RenderSystem::Render() {
 
     for (const auto& entity : m_entities) {
         // Check if the entity has a render component
-        if (entity->HasComponent<RenderComponent>()) {
+        if (entity->HasComponent<RenderComponent>() &&
+            entity->HasComponent<PhysicsComponent>()) {
             // Get the render component of the entity
             auto renderComponent = entity->GetComponents<RenderComponent>();
+            auto physicsComponent = entity->GetComponents<PhysicsComponent>();
 
             // Update model matrix uniform with the transform of the entity
-            m_ShaderProgram.setUniformMat4()
-            glUniformMatrix4fv(/* Model matrix uniform location */, 1, GL_FALSE, glm::value_ptr(entity->GetTransform()));
+            m_ShaderProgram.setUniformMat4("model", physicsComponent[0]->GetTransform());
 
             // Render the entity's geometry using the element buffer object and draw call
-            glDrawElements(/* Draw mode */, /* Element count */, GL_UNSIGNED_INT, 0);
+            glDrawElements(GL_TRIANGLES, renderComponent[0]->GetElementCount(), GL_UNSIGNED_INT, 0);
         }
     }
 

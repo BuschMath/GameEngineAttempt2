@@ -5,6 +5,7 @@
 #include "PositionComponent.h"
 #include "VelocityComponent.h"
 #include "HealthComponent.h"
+#include "PhysicsComponent.h"
 
 class EntityCreator {
 public:
@@ -15,6 +16,7 @@ public:
     void AddPositionComponent(std::shared_ptr<Entity> entity, float x, float y, float z);
     void AddVelocityComponent(std::shared_ptr<Entity> entity, float x, float y, float z);
     void AddHealthComponent(std::shared_ptr<Entity> entity, int health);
+    void AddPhysicsComponent(std::shared_ptr<Entity> entity);
 
     void SaveScene(const std::string& fileName) const;
 

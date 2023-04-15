@@ -3,7 +3,8 @@
 
 #include "Component.h"
 #include "glm/glm.hpp"
-#include <glm/gtc/quaternion.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtx/quaternion.hpp>
 
 class PhysicsComponent : public Component {
 public:
@@ -45,6 +46,15 @@ public:
     // Set the scale of the physics component
     void SetScale(const glm::vec3& scale) {
         this->scale = scale;
+    }
+
+    glm::mat4 GetTransform() const {
+        // Calculate the transformation matrix of the entity based on its position, rotation, and scale
+        glm::mat4 translationMatrix = glm::translate(glm::mat4(1.0f), position);
+        glm::mat4 rotationMatrix = glm::toMat4(rotation);
+        glm::mat4 scaleMatrix = glm::scale(glm::mat4(1.0f), scale);
+
+        return translationMatrix * rotationMatrix * scaleMatrix;
     }
 };
 

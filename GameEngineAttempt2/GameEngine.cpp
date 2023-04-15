@@ -90,7 +90,7 @@ void GameEngine::CreateEntities()
     std::shared_ptr<Entity> entity;
 
     while (true) {
-        std::cout << "\nEnter a command ('create', 'position', 'velocity', 'health', 'save' or 'exit'): ";
+        std::cout << "\nEnter a command ('create', 'physics, 'health', 'save' or 'exit'): ";
         std::getline(std::cin, command);
 
         if (command == "create") {
@@ -100,20 +100,9 @@ void GameEngine::CreateEntities()
             std::cout << "Entity created!\n";
             std::getline(std::cin, name);
         }
-        else if (command == "position") {
-            std::cout << "Enter x, y, and z coordinates for the position component: ";
-            float x, y, z;
-            std::cin >> x >> y >> z;
-            m_entityCreator->AddPositionComponent(entity, x, y, z);
-            std::cout << "Position component added!\n";
-            std::getline(std::cin, name);
-        }
-        else if (command == "velocity") {
-            std::cout << "Enter x, y, and z coordinates for the velocity component: ";
-            float x, y, z;
-            std::cin >> x >> y >> z;
-            m_entityCreator->AddVelocityComponent(entity, x, y, z);
-            std::cout << "Velocity component added!\n";
+        else if (command == "physics") {
+            m_entityCreator->AddPhysicsComponent();
+            std::cout << "Physics component added!\n";
             std::getline(std::cin, name);
         }
         else if (command == "health") {

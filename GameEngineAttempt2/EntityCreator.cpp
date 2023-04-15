@@ -22,6 +22,11 @@ void EntityCreator::AddHealthComponent(std::shared_ptr<Entity> entity, int healt
     healthComponent->SetHealth(health);
 }
 
+void EntityCreator::AddPhysicsComponent(std::shared_ptr<Entity> entity)
+{
+    auto physicsComponent = entity->AddComponent<PhysicsComponent>();
+}
+
 void EntityCreator::SaveScene(const std::string& fileName) const {
     m_entityFactory->SaveScene(fileName);
 }

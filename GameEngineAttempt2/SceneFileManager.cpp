@@ -82,6 +82,37 @@ bool SceneFileManager::SaveScene(const std::string& filePath, const std::vector<
             entityData["health"] = healthData;
         }
 
+        if (entity->HasComponent<PhysicsComponent>()) {
+            const auto physicsComponent = entity->GetComponents<PhysicsComponent>();
+            nlohmann::json physicsData;
+            physicsData["accelerationX"] = physicsComponent[0]->acceleration.x;
+            physicsData["accelerationY"] = physicsComponent[0]->acceleration.y;
+            physicsData["accelerationZ"] = physicsComponent[0]->acceleration.z;
+
+            physicsData["collidable"] = physicsComponent[0]->isCollidable;
+
+            physicsData["mass"] = physicsComponent[0]->mass;
+
+            physicsData["positionX"] = physicsComponent[0]->position.x;
+            physicsData["positionY"] = physicsComponent[0]->position.y;
+            physicsData["positionZ"] = physicsComponent[0]->position.z;
+
+            physicsData["rotationW"] = physicsComponent[0]->rotation.w;
+            physicsData["rotationX"] = physicsComponent[0]->rotation.x;
+            physicsData["rotationY"] = physicsComponent[0]->rotation.y;
+            physicsData["rotationZ"] = physicsComponent[0]->rotation.z;
+
+            physicsData["scaleX"] = physicsComponent[0]->scale.x;
+            physicsData["scaleY"] = physicsComponent[0]->scale.y;
+            physicsData["scaleZ"] = physicsComponent[0]->scale.z;
+
+            physicsData["velocityX"] = physicsComponent[0]->velocity.x;
+            physicsData["velocityY"] = physicsComponent[0]->velocity.y;
+            physicsData["velocityZ"] = physicsComponent[0]->velocity.z;
+
+            entityData["physics"] = physicsData;
+        }
+
         // add more components as needed
 
         jsonData["entities"].push_back(entityData);
