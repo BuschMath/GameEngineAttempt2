@@ -41,6 +41,11 @@ bool SceneFileManager::LoadScene(const std::string& filePath, EntityFactory& ent
             health->SetHealth(entityData["health"]["value"]);
         }
 
+        if (entityData.count("render") > 0) {
+            auto render = entity->AddComponent<RenderComponent>();
+            render->SetMeshDataFilePath(entityData["render"]["meshDataFilePath"]);
+        }
+
         if (entityData.count("physics") > 0) {
             auto physicsComponent = entity->AddComponent<PhysicsComponent>();
             
@@ -109,6 +114,14 @@ bool SceneFileManager::SaveScene(const std::string& filePath, const std::vector<
             int health = healthComp[0]->GetHealth();
             healthData["value"] = health;
             entityData["health"] = healthData;
+        }
+
+        if (entity->HasComponent<RenderComponent>()) {
+            const auto renderComp = entity->GetComponents<RenderComponent>();
+            nlohmann::json renderData;
+            std::string meshDataFilePath = renderComp[0]->GetMeshDataFilePath();
+            renderData["meshDataFilePath"] = meshDataFilePath;
+            entityData["render"] = renderData;
         }
 
         if (entity->HasComponent<PhysicsComponent>()) {
