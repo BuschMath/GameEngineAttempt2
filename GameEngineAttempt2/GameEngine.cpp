@@ -63,6 +63,12 @@ void GameEngine::Initialize() {
 
     m_entityFactory->LoadScene(SCENE_DATA_FILE);
 
+    for (int i = 0; i < m_entityFactory->GetEntities().size(); i++)
+    {
+        if(m_entityFactory->GetEntities()[i]->HasComponent<RenderComponent>())
+            m_renderSystem->RegisterEntity(m_entityFactory->GetEntities()[i]);
+    }
+
     // Initialize input handling
     // Initialize audio system
     // ...

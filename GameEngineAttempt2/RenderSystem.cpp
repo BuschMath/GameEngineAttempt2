@@ -19,6 +19,8 @@ RenderSystem::RenderSystem() {
     m_ShaderProgram.link();
     // Attach shaders, link program, set uniform locations, etc.
 
+    m_camera = std::make_shared<Camera>();
+
     // Unbind VAO, VBO, EBO, shaders
     glBindVertexArray(0);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
@@ -57,6 +59,7 @@ void RenderSystem::Render() {
 
     // Set up camera uniform data, such as view matrix, projection matrix, etc.
     // Set other uniform data, such as lights, materials, etc.
+    m_ShaderProgram.setUniformMat4("view", m_camera->GetViewMatrix());
 
     for (const auto& entity : m_entities) {
         // Check if the entity has a render component
