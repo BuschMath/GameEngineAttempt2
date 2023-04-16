@@ -22,9 +22,35 @@ void EntityCreator::AddHealthComponent(std::shared_ptr<Entity> entity, int healt
     healthComponent->SetHealth(health);
 }
 
-void EntityCreator::AddPhysicsComponent(std::shared_ptr<Entity> entity)
+void EntityCreator::AddPhysicsComponent(std::shared_ptr<Entity> entity, glm::vec3 acceleration, bool isCollidable, float mass,
+                                        glm::vec3 position, glm::quat rotation, glm::vec3 scale, glm::vec3 velocity)
 {
     auto physicsComponent = entity->AddComponent<PhysicsComponent>();
+
+    physicsComponent->acceleration.x = acceleration.x;
+    physicsComponent->acceleration.y = acceleration.y;
+    physicsComponent->acceleration.z = acceleration.z;
+
+    physicsComponent->isCollidable = isCollidable;
+
+    physicsComponent->mass = mass;
+
+    physicsComponent->position.x = position.x;
+    physicsComponent->position.y = position.y;
+    physicsComponent->position.z = position.z;
+
+    physicsComponent->rotation.w = rotation.w;
+    physicsComponent->rotation.x = rotation.x;
+    physicsComponent->rotation.y = rotation.y;
+    physicsComponent->rotation.z = rotation.z;
+
+    physicsComponent->scale.x = scale.x;
+    physicsComponent->scale.y = scale.y;
+    physicsComponent->scale.z = scale.z;
+
+    physicsComponent->velocity.x = velocity.x;
+    physicsComponent->velocity.y = velocity.y;
+    physicsComponent->velocity.z = velocity.z;
 }
 
 void EntityCreator::SaveScene(const std::string& fileName) const {

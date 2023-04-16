@@ -45,6 +45,7 @@ private:
     // Disable copy and assignment
     GameEngine(const GameEngine&) = delete;
     GameEngine& operator=(const GameEngine&) = delete;
+    void getPhysics(glm::vec3 acc, glm::vec3 pos, glm::vec3 vel, glm::vec3 scale, bool coll, float mass, glm::quat rot);
 };
 
 #endif // !GAME_ENGINE_H

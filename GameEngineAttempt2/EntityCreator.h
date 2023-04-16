@@ -16,7 +16,8 @@ public:
     void AddPositionComponent(std::shared_ptr<Entity> entity, float x, float y, float z);
     void AddVelocityComponent(std::shared_ptr<Entity> entity, float x, float y, float z);
     void AddHealthComponent(std::shared_ptr<Entity> entity, int health);
-    void AddPhysicsComponent(std::shared_ptr<Entity> entity);
+    void AddPhysicsComponent(std::shared_ptr<Entity> entity, glm::vec3 acceleration, bool isCollidable, float mass,
+        glm::vec3 position, glm::quat rotation, glm::vec3 scale, glm::vec3 velocity);
 
     void SaveScene(const std::string& fileName) const;
 

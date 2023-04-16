@@ -111,7 +111,12 @@ void GameEngine::CreateEntities()
             std::getline(std::cin, name);
         }
         else if (command == "physics") {
-            m_entityCreator->AddPhysicsComponent(entity);
+            glm::vec3 acc, pos, scale, vel;
+            bool coll;
+            float mass;
+            glm::quat rot;
+            getPhysics(acc, pos, vel, scale, coll, mass, rot);
+            m_entityCreator->AddPhysicsComponent(entity, acc, coll, mass, pos, rot, scale, vel);
             std::cout << "Physics component added!\n";
             std::getline(std::cin, name);
         }
@@ -137,4 +142,11 @@ void GameEngine::CreateEntities()
             std::cout << "Invalid command, please try again.\n";
         }
     }
+}
+
+void GameEngine::getPhysics(glm::vec3 acc, glm::vec3 pos, glm::vec3 vel, glm::vec3 scale, bool coll, float mass, glm::quat rot)
+{
+    std::cout << "Enter acceleration values for x, y, and z: ";
+    std::cin >> acc.x >> acc.y >> acc.z;
+    //...
 }
