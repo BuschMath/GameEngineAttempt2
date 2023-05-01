@@ -1,6 +1,6 @@
 #include "RenderSystem.h"
 
-RenderSystem::RenderSystem() {
+RenderSystem::RenderSystem() { 
     // Initialize OpenGL resources (VAO, VBO, EBO, shaders, etc.)
     glGenVertexArrays(1, &m_vertexArrayObject);
     glBindVertexArray(m_vertexArrayObject);

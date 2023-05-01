@@ -26,8 +26,6 @@ GameEngine::GameEngine()
 
     m_entityCreator = new EntityCreator();
 
-    m_renderSystem = new RenderSystem();
-
     m_gameEngineLogger->info("GameEngine constructor complete.\n.");
 }
 
@@ -60,6 +58,8 @@ void GameEngine::Initialize() {
         return;
     }
     m_gameEngineLogger->info("GLEW initialized.\n");
+
+    m_renderSystem = new RenderSystem();
 
     m_entityFactory->LoadScene(SCENE_DATA_FILE);
 
@@ -111,10 +111,13 @@ void GameEngine::CreateEntities()
             std::getline(std::cin, name);
         }
         else if (command == "physics") {
-            glm::vec3 acc, pos, scale, vel;
-            bool coll;
-            float mass;
-            glm::quat rot;
+            glm::vec3 acc = glm::vec3(0,0,0), 
+                pos = glm::vec3(0, 0, 0), 
+                scale = glm::vec3(0, 0, 0), 
+                vel = glm::vec3(0, 0, 0);
+            bool coll = false;
+            float mass = 1.0f;
+            glm::quat rot = glm::quat(0, 0, 0, 0);
             getPhysics(acc, pos, vel, scale, coll, mass, rot);
             m_entityCreator->AddPhysicsComponent(entity, acc, coll, mass, pos, rot, scale, vel);
             std::cout << "Physics component added!\n";
@@ -144,9 +147,32 @@ void GameEngine::CreateEntities()
     }
 }
 
-void GameEngine::getPhysics(glm::vec3 acc, glm::vec3 pos, glm::vec3 vel, glm::vec3 scale, bool coll, float mass, glm::quat rot)
+void GameEngine::getPhysics(glm::vec3& acc, glm::vec3& pos, glm::vec3& vel, glm::vec3& scale, bool& coll, 
+    float& mass, glm::quat& rot)
 {
+    char read = ' ';
     std::cout << "Enter acceleration values for x, y, and z: ";
     std::cin >> acc.x >> acc.y >> acc.z;
-    //...
+    
+    std::cout << "Enter position values for x, y, and z: ";
+    std::cin >> pos.x >> pos.y >> pos.z;
+
+    std::cout << "Enter velocity values for x, y, and z: ";
+    std::cin >> vel.x >> vel.y >> vel.z;
+
+    std::cout << "Enter scale values for x, y, and z: ";
+    std::cin >> scale.x >> scale.y >> scale.z;
+
+    std::cout << "Enter 1 if collision is enabled, 0 if not: ";
+    std::cin >> read;
+    if (read == '1')
+        coll = true;
+    else
+        coll = false;
+
+    std::cout << "Enter the mass: ";
+    std::cin >> mass;
+
+    std::cout << "Enter rotation values for w, x, y, and z: ";
+    std::cin >> rot.w >> rot.x >> rot.y >> rot.z;
 }
