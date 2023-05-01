@@ -4,7 +4,10 @@
 int main()
 {
 	GameEngine& g = GameEngine::GetInstance();
-	g.CreateEntities();
+	g.Initialize();
+	
+	while(true)
+		g.Render();
 	
 	return 0;
 }

@@ -42,8 +42,7 @@ bool SceneFileManager::LoadScene(const std::string& filePath, EntityFactory& ent
         }
 
         if (entityData.count("render") > 0) {
-            auto render = entity->AddComponent<RenderComponent>();
-            render->SetMeshDataFilePath(entityData["render"]["meshDataFilePath"]);
+            EntityCreator::AddRenderComponent(entity, entityData["render"]["meshDataFilePath"]);
         }
 
         if (entityData.count("physics") > 0) {

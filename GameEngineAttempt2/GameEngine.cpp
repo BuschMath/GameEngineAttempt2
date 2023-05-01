@@ -139,6 +139,14 @@ void GameEngine::CreateEntities()
             std::cout << "Data saved to file " << fileName << "!\n";
             std::getline(std::cin, name);
         }
+        else if (command == "render") {
+            std::cout << "Enter the file path for the mesh: ";
+            std::string filePath;
+            std::getline(std::cin >> std::ws, filePath);
+            m_entityCreator->AddRenderComponent(entity, filePath);
+            std::cout << "Render component added!\n";
+            std::getline(std::cin, name);
+        }
         else if (command == "exit")
             return;
         else {

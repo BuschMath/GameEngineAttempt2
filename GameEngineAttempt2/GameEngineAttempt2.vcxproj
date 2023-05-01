@@ -177,6 +177,7 @@
     <ClInclude Include="SystemFactory.h" />
     <ClInclude Include="SystemManager.h" />
     <ClInclude Include="VelocityComponent.h" />
+    <ClInclude Include="Vertex.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <ItemGroup>

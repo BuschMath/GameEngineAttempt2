@@ -14,6 +14,7 @@ class EntityFactory;
 #include "HealthComponent.h"
 #include "PhysicsComponent.h"
 #include "RenderComponent.h"
+#include "EntityCreator.h"
 
 class SceneFileManager {
 public:
