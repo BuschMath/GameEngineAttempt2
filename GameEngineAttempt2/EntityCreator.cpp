@@ -1,3 +1,4 @@
+#include "EntityFactory.h"
 #include "EntityCreator.h"
 
 std::shared_ptr<Entity> EntityCreator::CreateEntity(const std::string& name) {

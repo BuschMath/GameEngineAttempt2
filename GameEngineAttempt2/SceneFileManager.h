@@ -1,8 +1,6 @@
 #ifndef SCENE_FILE_MANAGER_H
 #define SCENE_FILE_MANAGER_H
 
-class EntityFactory;
-
 #include <fstream>
 #include <iostream>
 #include <nlohmann/json.hpp>

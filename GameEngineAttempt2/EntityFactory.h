@@ -1,13 +1,11 @@
 #ifndef ENTITY_FACTORY_H
 #define ENTITY_FACTORY_H
 
-class SceneFileManager;
-
 #include <memory>
 #include <unordered_map>
+#include <iostream>
 #include "Entity.h"
 #include "EntityManager.h"
-#include "SceneFileManager.h"
 #include "spdlog/spdlog.h"
 #include "spdlog/sinks/basic_file_sink.h"
 

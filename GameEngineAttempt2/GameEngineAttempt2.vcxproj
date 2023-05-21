@@ -29,7 +29,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -42,7 +42,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -71,8 +71,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\busch\source\repos\BuschMath\GameEngineAttempt2\GameEngineAttempt2\assimp-master\assimp-master\include;C:\Users\busch\source\repos\BuschMath\GameEngineAttempt2\GameEngineAttempt2\spdlog\include;C:\Users\busch\source\repos\BuschMath\GameEngineAttempt2\GameEngineAttempt2\GLFW\include;C:\Users\busch\source\repos\BuschMath\GameEngineAttempt2\GameEngineAttempt2\GLEW\include;C:\Users\busch\source\repos\BuschMath\GameEngineAttempt2\GameEngineAttempt2;C:\Users\busch\source\repos\BuschMath\GameEngineAttempt2\GameEngineAttempt2\json-develop\include;C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2;C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\spdlog\include;C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\GLFW\include;C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\GLEW\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\busch\source\repos\BuschMath\GameEngineAttempt2\GameEngineAttempt2\GLFW\lib-vc2019;C:\Users\busch\source\repos\BuschMath\GameEngineAttempt2\GameEngineAttempt2\GLEW\lib\Release\Win32;C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\GLFW\lib-vc2019;C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\GLEW\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\busch\source\repos\BuschMath\GameEngineAttempt2\GameEngineAttempt2\assimp-master\assimp-master\build\include;C:\Users\busch\source\repos\BuschMath\GameEngineAttempt2\GameEngineAttempt2\assimp-master\assimp-master\include;C:\Users\busch\source\repos\BuschMath\GameEngineAttempt2\GameEngineAttempt2\spdlog\include;C:\Users\busch\source\repos\BuschMath\GameEngineAttempt2\GameEngineAttempt2\GLFW\include;C:\Users\busch\source\repos\BuschMath\GameEngineAttempt2\GameEngineAttempt2\GLEW\include;C:\Users\busch\source\repos\BuschMath\GameEngineAttempt2\GameEngineAttempt2;C:\Users\busch\source\repos\BuschMath\GameEngineAttempt2\GameEngineAttempt2\json-develop\include;C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2;C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\spdlog\include;C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\GLFW\include;C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\GLEW\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\busch\source\repos\BuschMath\GameEngineAttempt2\GameEngineAttempt2\assimp-master\assimp-master\build\bin;C:\Users\busch\source\repos\BuschMath\GameEngineAttempt2\GameEngineAttempt2\assimp-master\assimp-master\build\lib\Release;C:\Users\busch\source\repos\BuschMath\GameEngineAttempt2\GameEngineAttempt2\GLFW\lib-vc2019;C:\Users\busch\source\repos\BuschMath\GameEngineAttempt2\GameEngineAttempt2\GLEW\lib\Release\Win32;C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\GLFW\lib-vc2019;C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\GLEW\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\GLFW\include;C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\GLEW\include;$(IncludePath)</IncludePath>
@@ -96,7 +96,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);glew32.lib;glew32s.lib;glfw3.lib;/NODEFAULTLIB:MSVCRT;opengl32.lib</AdditionalDependencies>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);glew32.lib;glew32s.lib;glfw3.lib;/NODEFAULTLIB:MSVCRT;opengl32.lib;assimp-vc143-mt.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\GLFW\lib-vc2019;C:\Users\busch\Documents\C++\GameEngineAttempt2\GameEngineAttempt2\GLEW\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>

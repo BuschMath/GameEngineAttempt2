@@ -1,0 +1,780 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-ca948a722340f18cfa2e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						2,
+						3,
+						5
+					]
+				},
+				{
+					"build" : "contrib/zlib",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-contrib.zlib-Debug-fdbaeffaafa36798d1bc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "contrib/zlib",
+					"targetIndexes" : 
+					[
+						1,
+						7
+					]
+				},
+				{
+					"build" : "code",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-code-Debug-273d73aa4dfd1334c516.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "code",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "test",
+					"childIndexes" : 
+					[
+						4
+					],
+					"jsonFile" : "directory-test-Debug-f18be1977b403cfd1a50.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "test",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "test/headercheck",
+					"jsonFile" : "directory-test.headercheck-Debug-5932dbc0c669dcc7095c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 0,
+					"source" : "test/headercheck"
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						2,
+						3,
+						4
+					],
+					"name" : "Assimp",
+					"targetIndexes" : 
+					[
+						0,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "zlib",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-Debug-d5794bc5731a521cf97b.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ALL_BUILD::@de27f3809863e2bb7c79",
+					"jsonFile" : "target-ALL_BUILD-Debug-30142184bc2a3ac4aea5.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "UpdateAssimpLibsDebugSymbolsAndDLLs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-UpdateAssimpLibsDebugSymbolsAndDLLs-Debug-828657cece5d33f30375.json",
+					"name" : "UpdateAssimpLibsDebugSymbolsAndDLLs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-Debug-799ddc295d6b8f3475d2.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "assimp::@1c76e98fcac0e60aa45c",
+					"jsonFile" : "target-assimp-Debug-38d7245cd31a6b96facf.json",
+					"name" : "assimp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Debug-a905bb67f8b256b1324c.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "unit::@36f028580bb02cc8272a",
+					"jsonFile" : "target-unit-Debug-eaab72ff47e79fcef750.json",
+					"name" : "unit",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "zlibstatic::@de27f3809863e2bb7c79",
+					"jsonFile" : "target-zlibstatic-Debug-bc8a858cf68880cc1a5b.json",
+					"name" : "zlibstatic",
+					"projectIndex" : 1
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-ca948a722340f18cfa2e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						2,
+						3,
+						5
+					]
+				},
+				{
+					"build" : "contrib/zlib",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-contrib.zlib-Release-597700c02540d23cbc5e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "contrib/zlib",
+					"targetIndexes" : 
+					[
+						1,
+						7
+					]
+				},
+				{
+					"build" : "code",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-code-Release-94f659d36e5f87497eaf.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "code",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "test",
+					"childIndexes" : 
+					[
+						4
+					],
+					"jsonFile" : "directory-test-Release-f18be1977b403cfd1a50.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "test",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "test/headercheck",
+					"jsonFile" : "directory-test.headercheck-Release-5932dbc0c669dcc7095c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 0,
+					"source" : "test/headercheck"
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						2,
+						3,
+						4
+					],
+					"name" : "Assimp",
+					"targetIndexes" : 
+					[
+						0,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "zlib",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-Release-d5794bc5731a521cf97b.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ALL_BUILD::@de27f3809863e2bb7c79",
+					"jsonFile" : "target-ALL_BUILD-Release-30142184bc2a3ac4aea5.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "UpdateAssimpLibsDebugSymbolsAndDLLs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-UpdateAssimpLibsDebugSymbolsAndDLLs-Release-828657cece5d33f30375.json",
+					"name" : "UpdateAssimpLibsDebugSymbolsAndDLLs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-Release-799ddc295d6b8f3475d2.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "assimp::@1c76e98fcac0e60aa45c",
+					"jsonFile" : "target-assimp-Release-a486846c9be8f7e7f396.json",
+					"name" : "assimp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Release-a905bb67f8b256b1324c.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "unit::@36f028580bb02cc8272a",
+					"jsonFile" : "target-unit-Release-627ceaa5b92ad90e55c1.json",
+					"name" : "unit",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "zlibstatic::@de27f3809863e2bb7c79",
+					"jsonFile" : "target-zlibstatic-Release-4bc2402b9b402094b438.json",
+					"name" : "zlibstatic",
+					"projectIndex" : 1
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-MinSizeRel-ca948a722340f18cfa2e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						2,
+						3,
+						5
+					]
+				},
+				{
+					"build" : "contrib/zlib",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-contrib.zlib-MinSizeRel-6cbfd59482383135d2a6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "contrib/zlib",
+					"targetIndexes" : 
+					[
+						1,
+						7
+					]
+				},
+				{
+					"build" : "code",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-code-MinSizeRel-be31b7635c41f50e810e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "code",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "test",
+					"childIndexes" : 
+					[
+						4
+					],
+					"jsonFile" : "directory-test-MinSizeRel-f18be1977b403cfd1a50.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "test",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "test/headercheck",
+					"jsonFile" : "directory-test.headercheck-MinSizeRel-5932dbc0c669dcc7095c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 0,
+					"source" : "test/headercheck"
+				}
+			],
+			"name" : "MinSizeRel",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						2,
+						3,
+						4
+					],
+					"name" : "Assimp",
+					"targetIndexes" : 
+					[
+						0,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "zlib",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-d5794bc5731a521cf97b.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ALL_BUILD::@de27f3809863e2bb7c79",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-30142184bc2a3ac4aea5.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "UpdateAssimpLibsDebugSymbolsAndDLLs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-UpdateAssimpLibsDebugSymbolsAndDLLs-MinSizeRel-828657cece5d33f30375.json",
+					"name" : "UpdateAssimpLibsDebugSymbolsAndDLLs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-MinSizeRel-799ddc295d6b8f3475d2.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "assimp::@1c76e98fcac0e60aa45c",
+					"jsonFile" : "target-assimp-MinSizeRel-9a92fe5f07d76ab43a91.json",
+					"name" : "assimp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-MinSizeRel-a905bb67f8b256b1324c.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "unit::@36f028580bb02cc8272a",
+					"jsonFile" : "target-unit-MinSizeRel-d6f6e1d09cfa1155ca2b.json",
+					"name" : "unit",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "zlibstatic::@de27f3809863e2bb7c79",
+					"jsonFile" : "target-zlibstatic-MinSizeRel-2b93d31b9ff659cc6a24.json",
+					"name" : "zlibstatic",
+					"projectIndex" : 1
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-RelWithDebInfo-ca948a722340f18cfa2e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						2,
+						3,
+						5
+					]
+				},
+				{
+					"build" : "contrib/zlib",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-contrib.zlib-RelWithDebInfo-14fbc01c049301e851f8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "contrib/zlib",
+					"targetIndexes" : 
+					[
+						1,
+						7
+					]
+				},
+				{
+					"build" : "code",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-code-RelWithDebInfo-e15c12755692f72700c1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "code",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "test",
+					"childIndexes" : 
+					[
+						4
+					],
+					"jsonFile" : "directory-test-RelWithDebInfo-f18be1977b403cfd1a50.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "test",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "test/headercheck",
+					"jsonFile" : "directory-test.headercheck-RelWithDebInfo-5932dbc0c669dcc7095c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 0,
+					"source" : "test/headercheck"
+				}
+			],
+			"name" : "RelWithDebInfo",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						2,
+						3,
+						4
+					],
+					"name" : "Assimp",
+					"targetIndexes" : 
+					[
+						0,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "zlib",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-d5794bc5731a521cf97b.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ALL_BUILD::@de27f3809863e2bb7c79",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-30142184bc2a3ac4aea5.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "UpdateAssimpLibsDebugSymbolsAndDLLs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-UpdateAssimpLibsDebugSymbolsAndDLLs-RelWithDebInfo-828657cece5d33f30375.json",
+					"name" : "UpdateAssimpLibsDebugSymbolsAndDLLs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-RelWithDebInfo-799ddc295d6b8f3475d2.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "assimp::@1c76e98fcac0e60aa45c",
+					"jsonFile" : "target-assimp-RelWithDebInfo-178928da25753823156a.json",
+					"name" : "assimp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-RelWithDebInfo-a905bb67f8b256b1324c.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "unit::@36f028580bb02cc8272a",
+					"jsonFile" : "target-unit-RelWithDebInfo-fbb51e1c3dca93da2ced.json",
+					"name" : "unit",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "zlibstatic::@de27f3809863e2bb7c79",
+					"jsonFile" : "target-zlibstatic-RelWithDebInfo-a04a35f8dd39996104f8.json",
+					"name" : "zlibstatic",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/busch/source/repos/BuschMath/GameEngineAttempt2/GameEngineAttempt2/assimp-master/assimp-master/build",
+		"source" : "C:/Users/busch/source/repos/BuschMath/GameEngineAttempt2/GameEngineAttempt2/assimp-master/assimp-master"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
